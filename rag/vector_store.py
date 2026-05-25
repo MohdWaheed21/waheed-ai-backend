@@ -1,16 +1,14 @@
 import os
 from langchain_community.vectorstores import Chroma
-from langchain_openai import OpenAIEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 from rag.loader import load_documents
 
 VECTOR_DB_PATH = "./chroma_db"
 
 
 def get_embeddings():
-    return OpenAIEmbeddings(
-        api_key=os.getenv("OPENROUTER_API_KEY"),
-        base_url="https://openrouter.ai/api/v1",
-        model="text-embedding-3-small",
+    return HuggingFaceEmbeddings(
+        model_name="sentence-transformers/paraphrase-MiniLM-L3-v2"
     )
 
 
@@ -24,7 +22,7 @@ def create_vector_store():
         persist_directory=VECTOR_DB_PATH,
     )
 
-    print("Chroma vector DB created")
+    print("Vector DB created")
 
 
 def load_vector_store():
