@@ -1,11 +1,5 @@
 fastapi
 uvicorn
-langchain
-langchain-community
 langchain-openai
-langchain-huggingface
-chromadb
 python-dotenv
 pydantic
-sentence-transformers
-torch --index-url https://download.pytorch.org/whl/cpu

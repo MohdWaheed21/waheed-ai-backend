@@ -1,18 +1,21 @@
 import os
+import json
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
-from rag.vector_store import load_vector_store
 
 load_dotenv()
 
-vectorstore = load_vector_store()
+with open("data/waheed_profile.json", "r", encoding="utf-8") as f:
+    profile_data = json.load(f)
+
+PROFILE_CONTEXT = json.dumps(profile_data, indent=2)
 
 
 def get_llm():
     return ChatOpenAI(
         api_key=os.getenv("OPENROUTER_API_KEY"),
         base_url="https://openrouter.ai/api/v1",
-        model="deepseek/deepseek-chat-v3-0324",
+        model="deepseek/deepseek-chat",
         temperature=0.4,
         timeout=30,
     )
@@ -22,26 +25,33 @@ def ask(question: str):
     try:
         llm = get_llm()
 
-        docs = vectorstore.similarity_search(question, k=8)
-
-        context = "\n\n".join(
-            [doc.page_content for doc in docs]
-        )
-
         prompt = f"""
 You are MD Waheed Pasha's official AI portfolio assistant.
 
-ONLY answer questions about Waheed:
-education, skills, projects, internships, certifications,
-leadership, contact, achievements, portfolio.
+You represent Waheed professionally.
+
+ONLY answer questions about:
+- Waheed
+- education
+- skills
+- projects
+- internships
+- certifications
+- leadership
+- hackathons
+- achievements
+- career goals
+- contact
+- portfolio
+- experience
 
 If unrelated:
-"I can only answer questions about Waheed."
+"I can only answer questions about Waheed and his professional profile."
 
-Be professional and recruiter-friendly.
+Be natural, professional, recruiter-friendly.
 
-CONTEXT:
-{context}
+WAHEED PROFILE DATA:
+{PROFILE_CONTEXT}
 
 QUESTION:
 {question}
