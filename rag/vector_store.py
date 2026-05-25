@@ -1,14 +1,16 @@
 import os
-from langchain_community.vectorstores import FAISS
-from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_community.vectorstores import Chroma
+from langchain_openai import OpenAIEmbeddings
 from rag.loader import load_documents
 
-VECTOR_DB_PATH = "faiss_index"
+VECTOR_DB_PATH = "./chroma_db"
 
 
 def get_embeddings():
-    return HuggingFaceEmbeddings(
-        model_name="sentence-transformers/all-MiniLM-L6-v2"
+    return OpenAIEmbeddings(
+        api_key=os.getenv("OPENROUTER_API_KEY"),
+        base_url="https://openrouter.ai/api/v1",
+        model="text-embedding-3-small",
     )
 
 
@@ -16,14 +18,13 @@ def create_vector_store():
     docs = load_documents()
     embeddings = get_embeddings()
 
-    vectorstore = FAISS.from_documents(
-        docs,
-        embeddings
+    Chroma.from_documents(
+        documents=docs,
+        embedding=embeddings,
+        persist_directory=VECTOR_DB_PATH,
     )
 
-    vectorstore.save_local(VECTOR_DB_PATH)
-
-    print("JSON Vector DB created successfully")
+    print("Chroma vector DB created")
 
 
 def load_vector_store():
@@ -32,8 +33,7 @@ def load_vector_store():
     if not os.path.exists(VECTOR_DB_PATH):
         create_vector_store()
 
-    return FAISS.load_local(
-        VECTOR_DB_PATH,
-        embeddings,
-        allow_dangerous_deserialization=True
+    return Chroma(
+        persist_directory=VECTOR_DB_PATH,
+        embedding_function=embeddings,
     )
