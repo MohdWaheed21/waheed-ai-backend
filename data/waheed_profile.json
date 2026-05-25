@@ -1,0 +1,194 @@
+{
+  "personal": {
+    "full_name": "MD Waheed Pasha",
+    "preferred_name": "Waheed",
+    "title": "AI/ML Engineer | Generative AI Developer | Full Stack AI Builder",
+    "career_goal": "To become a top AI/ML Engineer building intelligent real-world products with a strong technical role and competitive compensation.",
+    "about": "MD Waheed Pasha is an AI/ML-focused engineering student passionate about building intelligent products using machine learning, computer vision, LLMs, generative AI, and scalable backend systems. He enjoys solving real-world problems through AI-driven applications and modern software engineering."
+  },
+
+  "education": [
+    {
+      "institution": "Kothakota Pupils School",
+      "location": "Kothakota, Wanaparthy, Telangana",
+      "board": "CBSE",
+      "qualification": "10th Standard",
+      "year": "2021"
+    },
+    {
+      "institution": "Rishi Junior College",
+      "location": "Mahabubnagar, Telangana",
+      "board": "Telangana State Intermediate Board",
+      "qualification": "Intermediate",
+      "year": "2023"
+    },
+    {
+      "institution": "Anurag University",
+      "location": "Venkatapur, Ghatkesar, Hyderabad",
+      "qualification": "B.Tech",
+      "branch": "Information Technology",
+      "year": "2023-Present",
+      "current_year": "4th Year",
+      "cgpa": "7.5/10"
+    }
+  ],
+
+  "skills": {
+    "programming": [
+      "Python",
+      "C",
+      "C++",
+      "Java",
+      "Kotlin",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "TypeScript"
+    ],
+    "ai_ml": [
+      "TensorFlow",
+      "PyTorch",
+      "Scikit-learn",
+      "OpenCV",
+      "YOLO",
+      "Computer Vision",
+      "NLP",
+      "LLMs",
+      "Reinforcement Learning",
+      "Multimodal AI"
+    ],
+    "genai": [
+      "LangChain",
+      "RAG",
+      "LoRA Fine-tuning",
+      "Llama",
+      "Gemini API",
+      "Ollama",
+      "Hugging Face Transformers",
+      "Prompt Engineering",
+      "Vector Databases"
+    ],
+    "backend": [
+      "FastAPI",
+      "Flask",
+      "REST APIs",
+      "PostgreSQL",
+      "SQLite"
+    ],
+    "frontend": [
+      "React",
+      "Next.js",
+      "Tailwind CSS"
+    ],
+    "mobile": [
+      "Android Studio",
+      "Kotlin",
+      "SQLite",
+      "Gemini API Integration"
+    ],
+    "devops": [
+      "Docker",
+      "MLflow",
+      "Git",
+      "GitHub",
+      "GitHub Actions",
+      "CI/CD",
+      "Render",
+      "Vercel"
+    ]
+  },
+
+  "projects": [
+    {
+      "name": "Adaptive AI Fighting Game",
+      "description": "AI opponent that learns and adapts to player behavior dynamically.",
+      "tech_stack": ["Python", "TensorFlow", "Reinforcement Learning", "Unity", "C#", "ONNX"]
+    },
+    {
+      "name": "SnapSearch AI Gallery",
+      "description": "Android application for searching gallery images using natural language with Gemini AI.",
+      "tech_stack": ["Android Studio", "Kotlin", "Gemini API", "SQLite"]
+    },
+    {
+      "name": "SQL Query LLM",
+      "description": "Fine-tuned Llama model using LoRA for natural language to SQL generation.",
+      "tech_stack": ["Llama", "LoRA", "Python", "FastAPI"]
+    },
+    {
+      "name": "YouTube Unsafe Content Detector",
+      "description": "AI-based unsafe content detection using video and audio understanding.",
+      "tech_stack": ["YOLO", "Whisper", "Flask", "OpenCV"]
+    },
+    {
+      "name": "RAG Knowledge Assistant",
+      "description": "AI assistant using retrieval augmented generation for document question answering.",
+      "tech_stack": ["LangChain", "FAISS", "FastAPI", "Gemini"]
+    },
+    {
+      "name": "AI Image Search Engine",
+      "description": "Semantic image retrieval system using vision language models.",
+      "tech_stack": ["SmolVLM", "Flask", "Computer Vision"]
+    },
+    {
+      "name": "Khatha Mobile App",
+      "description": "Mobile bookkeeping application for tracking expenses and records.",
+      "tech_stack": ["Android Studio", "Kotlin", "SQLite"]
+    },
+    {
+      "name": "Weather MLOps System",
+      "description": "End-to-end ML deployment pipeline with Docker and MLflow.",
+      "tech_stack": ["FastAPI", "Docker", "MLflow", "CI/CD"]
+    },
+    {
+      "name": "Chess AI Agent",
+      "description": "Self-learning chess AI using reinforcement learning.",
+      "tech_stack": ["Python", "TensorFlow", "RL"]
+    },
+    {
+      "name": "Portfolio AI Assistant",
+      "description": "Personal AI chatbot integrated into portfolio website using RAG + Gemini.",
+      "tech_stack": ["Next.js", "FastAPI", "Gemini", "LangChain"]
+    }
+  ],
+
+  "experience": [
+    {
+      "organization": "Viswam AI / Swecha",
+      "role": "AI Internship",
+      "description": "Worked on AI systems, project development, and practical deployment workflows."
+    }
+  ],
+
+  "leadership": [
+    {
+      "event": "Hackathon Organizer",
+      "role": "Marketing Lead",
+      "year": "2026"
+    }
+  ],
+
+  "hackathons": [
+    {
+      "event": "Visnova Hackathon",
+      "year": "2025"
+    }
+  ],
+
+  "certifications": [
+    "Object Oriented Programming using Python - Infosys Springboard",
+    "AI Foundations - HP LIFE",
+    "Machine Learning with Python - freeCodeCamp"
+  ],
+
+  "contact": {
+    "email": "mohmmadshaikwaheed@gmail.com",
+    "phone": "+91 63028 81566",
+    "github": "ADD_YOUR_GITHUB_LINK",
+    "linkedin": "ADD_YOUR_LINKEDIN_LINK",
+    "resume": "ADD_YOUR_RESUME_LINK"
+  },
+
+  "recruiter_pitch": {
+    "why_hire": "Waheed combines strong AI/ML engineering skills with practical product-building experience across LLMs, computer vision, RAG systems, backend engineering, MLOps, and mobile AI applications."
+  }
+}
